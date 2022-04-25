@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: homework1-deployment
+  labels:
+    app: homework1
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: homework1
+  template:
+    metadata:
+      labels:
+        app: homework1
+    spec:
+      containers:
+      - name: homework1
+        image: stepak/otus-microservice-homework1:tag1
+        ports:
+        - containerPort: 8000
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 5
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 10

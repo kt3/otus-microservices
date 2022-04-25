@@ -14,21 +14,3 @@ spec:
                 name: homework1
                 port:
                   number: 8000
-
-
-                  
-# spec:
-#   ingressClassName: nginx
-  
-#   rules:
-#     - host: arch.homework
-#       http:
-#         paths:
-#           - path: /
-#             pathType: Prefix
-#             backend:
-#               service:
-#                 name: homework1
-#                 port:
-#                   number: 8000
-            

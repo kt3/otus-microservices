@@ -3,6 +3,7 @@ kind: Ingress
 metadata:
   name: homework1
 spec:
+  ingressClassName: nginx
   rules:
     - host: arch.homework
       http:

@@ -1,0 +1,27 @@
+*.class
+
+# Package Files #
+*.war
+*.ear
+
+**/create.sql
+.gradle
+build
+**/build/
+*.iml
+.idea
+*.idea
+.idea
+checkstyle.cache
+out
+target
+!src/**/build
+/rest/rest-client.env.json
+.attach_pid*
+lombok.config
+.DS_Store
+*.hprof
+checkstyle.cache
+~$*.*
+images.json
+

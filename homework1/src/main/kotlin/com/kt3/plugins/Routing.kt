@@ -12,5 +12,8 @@ fun Application.configureRouting() {
         get("/health") {
             call.respond(mapOf("status" to "OK"))
         }
+        get("/") {
+            call.respond("Hello world!")
+        }
     }
 }

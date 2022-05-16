@@ -1,4 +1,4 @@
-package com.kt3.plugins
+package com.kt3.homework.plugins
 
 import io.ktor.serialization.kotlinx.json.json
 import io.ktor.server.application.Application

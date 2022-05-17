@@ -22,11 +22,11 @@ package com.kt3.homework.user.models
  */
 @kotlinx.serialization.Serializable
 data class User(
-    val id: kotlin.Long? = null,
-    val username: kotlin.String? = null,
-    val firstName: kotlin.String? = null,
-    val lastName: kotlin.String? = null,
-    val email: kotlin.String? = null,
-    val phone: kotlin.String? = null
+    val id: Long? = null,
+    val username: String? = null,
+    val firstName: String? = null,
+    val lastName: String? = null,
+    val email: String? = null,
+    val phone: String? = null
 ) 
 

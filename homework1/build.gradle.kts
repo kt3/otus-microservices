@@ -1,6 +1,9 @@
 val ktor_version: String by project
 val kotlin_version: String by project
 val logback_version: String by project
+val flyway_version: String by project
+val hikari_version: String by project
+val ktorm_version: String by project
 
 plugins {
     application
@@ -9,13 +12,13 @@ plugins {
     id("com.github.johnrengelman.shadow") version "7.0.0"
     id("org.openapi.generator") version "5.3.0"
 }
-
 group = "com.kt3"
+
 version = "0.0.1"
 
 val generatedSources = file("$buildDir/generate-resources/main/src/kotlin")
 
-kotlin.sourceSets{
+kotlin.sourceSets {
     main {
         kotlin.srcDirs += generatedSources
     }
@@ -38,7 +41,6 @@ repositories {
     mavenCentral()
     maven { url = uri("https://maven.pkg.jetbrains.space/public/p/ktor/eap") }
 }
-
 dependencies {
 //    implementation("io.ktor:ktor-server-core-jvm:$ktor_version")
 //    implementation("io.ktor:ktor-server-netty-jvm:$ktor_version")
@@ -47,7 +49,14 @@ dependencies {
     implementation("io.ktor:ktor-serialization-kotlinx-json-jvm:$ktor_version")
     implementation("io.ktor:ktor-server-netty:$ktor_version")
     implementation("io.ktor:ktor-server-resources:$ktor_version")
+
+    implementation("org.ktorm:ktorm-core:${ktorm_version}")
     implementation("ch.qos.logback:logback-classic:$logback_version")
+    implementation("org.flywaydb:flyway-core:$flyway_version")
+    implementation("com.zaxxer:HikariCP:$hikari_version")
+    implementation("org.postgresql:postgresql:42.2.2")
+    implementation("org.flywaydb:flyway-core:5.2.4")
+
     testImplementation("io.ktor:ktor-server-tests-jvm:$ktor_version")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
 }

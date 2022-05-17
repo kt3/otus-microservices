@@ -9,16 +9,16 @@
 * https://openapi-generator.tech
 * Do not edit the class manually.
 */
-package com.kt3.homework.models
-
+package com.kt3.homework.user.models
 
 /**
  * 
  * @param code 
  * @param message 
  */
-data class Error(
-    val code: kotlin.Int,
-    val message: kotlin.String
+@kotlinx.serialization.Serializable
+data class ErrorResponse(
+    val code: Int,
+    val message: String
 ) 
 

@@ -11,7 +11,7 @@ import org.ktorm.entity.sequenceOf
 
 object UserService {
 
-    private val db = DatabaseFactory.database
+    private val db by lazy { DatabaseFactory.database }
 
     private val Database.users get() = this.sequenceOf(Users)
 

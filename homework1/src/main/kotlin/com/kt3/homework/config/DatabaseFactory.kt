@@ -11,10 +11,10 @@ import org.ktorm.logging.LogLevel
 
 object DatabaseFactory {
 
-    private val appConfig = HoconApplicationConfig(ConfigFactory.load())
-    private val dbUrl = appConfig.property("db.jdbcUrl").getString()
-    private val dbUser = appConfig.property("db.dbUser").getString()
-    private val dbPassword = appConfig.property("db.dbPassword").getString()
+    private val appConfig by lazy { HoconApplicationConfig(ConfigFactory.load()) }
+    private val dbUrl by lazy { appConfig.property("db.jdbcUrl").getString() }
+    private val dbUser by lazy { appConfig.property("db.dbUser").getString() }
+    private val dbPassword by lazy { appConfig.property("db.dbPassword").getString() }
 
     val database by lazy {
         Database.connect(

@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: homework2-secret
+type: Opaque
+data:
+  DB_URL: amRiYzpwb3N0Z3Jlc3FsOi8vaG9zdC5taW5pa3ViZS5pbnRlcm5hbDo1NDMyL290dXNfaG9tZXdvcmsy
+  DB_USER: cG9zdGdyZXM=
+  DB_PASSWORD: ZG9ja2VyCg==

@@ -14,3 +14,4 @@ deploy:
     - homework-k8s/deployment.yaml
     - homework-k8s/nginx-ingress.yaml
     - homework-k8s/service.yaml
+    - homework-k8s/app-config.yaml

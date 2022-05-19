@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: homework2-secret
+type: Opaque
+data:
+  DB_URL: {{ printf "jdbc:postgresql://%s-postgresql-hl:%s/%s"
+  .Release.Name
+  .Values.postgresql.global.postgresql.service.ports.postgresql
+  .Values.postgresql.global.postgresql.auth.database | b64enc }}
+  DB_USER: {{ .Values.postgresql.global.postgresql.auth.username | b64enc }}
+  DB_PASSWORD: {{ .Values.postgresql.global.postgresql.auth.password | b64enc }}

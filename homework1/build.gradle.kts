@@ -25,7 +25,7 @@ kotlin.sourceSets {
 }
 
 application {
-    mainClass.set("com.kt3.ApplicationKt")
+    mainClass.set("com.kt3.homework.ApplicationKt")
 
     val isDevelopment: Boolean = project.ext.has("development")
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")

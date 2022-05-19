@@ -142,7 +142,7 @@
 		},
 		{
 			"key": "baseUrl",
-			"value": "http://localhost:8000",
+			"value": "http://arch.homework",
 			"type": "string"
 		}
 	]

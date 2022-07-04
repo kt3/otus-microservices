@@ -19,4 +19,5 @@ fun Application.configureRouting() {
 
         userApi()
     }
+
 }
